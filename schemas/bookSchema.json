@@ -1,0 +1,97 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "isbn",
+    "amazon_url",
+    "author",
+    "language",
+    "pages",
+    "publisher",
+    "title",
+    "year"
+  ],
+  "properties": {
+    "isbn": {
+      "$id": "#/properties/isbn",
+      "type": "string",
+      "title": "The Isbn Schema",
+      "default": "",
+      "examples": [
+        "1234567890"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "amazon_url": {
+      "$id": "#/properties/amazon_url",
+      "type": "string",
+      "title": "The Amazon_url Schema",
+      "default": "",
+      "examples": [
+        "http://www.google.com"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "author": {
+      "$id": "#/properties/author",
+      "type": "string",
+      "title": "The Author Schema",
+      "default": "",
+      "examples": [
+        "James Ng"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "language": {
+      "$id": "#/properties/language",
+      "type": "string",
+      "title": "The Language Schema",
+      "default": "",
+      "examples": [
+        "Javascript"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "pages": {
+      "$id": "#/properties/pages",
+      "type": "integer",
+      "title": "The Pages Schema",
+      "default": 0,
+      "examples": [
+        500
+      ]
+    },
+    "publisher": {
+      "$id": "#/properties/publisher",
+      "type": "string",
+      "title": "The Publisher Schema",
+      "default": "",
+      "examples": [
+        "random Publisher"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "title": "The Title Schema",
+      "default": "",
+      "examples": [
+        "How to write javascript in 10 days"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "year": {
+      "$id": "#/properties/year",
+      "type": "integer",
+      "title": "The Year Schema",
+      "default": 0,
+      "examples": [
+        2020
+      ]
+    }
+  }
+}

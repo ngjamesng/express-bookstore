@@ -1,4 +1,5 @@
 const db = require("../db");
+const ExpressError = require("../expressError");
 
 
 /** Collection of related methods for books. */
@@ -155,7 +156,13 @@ class Book {
       throw { message: `There is no book with an isbn '${isbn}`, status: 404 }
     }
   }
-}
 
+  /* process errors for json schema for create/update */
+  static processErrors(result) {
+    let listOfErrors = result.errors.map((e) => e.stack);
+    console.log("LIST OF ERRORS >>>>>>", listOfErrors);
+    return {error:listOfErrors, status:400};
+  }
+}
 
 module.exports = Book;
